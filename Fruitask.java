@@ -13,10 +13,10 @@ import com.google.appinventor.components.runtime.EventDispatcher;
 import com.google.appinventor.components.runtime.util.YailList;
 import com.google.appinventor.components.runtime.errors.YailRuntimeError;
 
-@DesignerComponent(version = 1,  description = "This Extension was created with the AppyBuilder Code Editor.<br>" + 
+@DesignerComponent(version = 1,  description = "Fruitask Extension v1.0 .<br>" + 
                    "Create your own here:<br><a href='https://editor.appybuilder.com' target='_blank'>https://editor.appybuilder.com</a><br>",
         category = ComponentCategory.EXTENSION,
-        nonVisible = true,   iconName = "http://appyBuilder.com/extensions/icons/extension.png")
+        nonVisible = true,   iconName = "https://fruitask.com/assets/logo/Fruitask-logo.svg")
 @SimpleObject(external = true)
 public class Fruitask extends AndroidNonvisibleComponent {
     private ComponentContainer container;
@@ -28,7 +28,7 @@ public class Fruitask extends AndroidNonvisibleComponent {
         this.container = container;
     }
   
-  private String Apikey;
+   private String Apikey;
   private String Baseid;
   private String Table_Name;
   private int Rowid;
@@ -139,7 +139,7 @@ public class Fruitask extends AndroidNonvisibleComponent {
     
   }
   @SimpleEvent
-  public void Got_All_Rows(int response_Code,String response_Content,int total_Row){
+  public void Got_All_Rows(int response_Code,String response_Content,int total_Rows){
    EventDispatcher.dispatchEvent(this,"Got_All_Rows",response_Code,response_Content,total_Rows);
   }
 }
