@@ -28,7 +28,7 @@ public class Fruitask extends AndroidNonvisibleComponent {
         this.container = container;
     }
   
-   private String Apikey;
+  private String Apikey;
   private String Baseid;
   private String Table_Name;
   private int Rowid;
@@ -102,15 +102,31 @@ public class Fruitask extends AndroidNonvisibleComponent {
     Column_Name = column_Name;
     max_Record = max_Record;
   }
+  @SimpleEvent
+  public void Got_Column(int response_Code,String values,int row_id,String created_Times){
+   EventDispatcher.dispatchEvent(this,"Got_Column",response_Code,values,row_id,created_Times);
+  }
+  @SimpleEvent
+  public void Row_Updated(int response_Code){
+   EventDispatcher.dispatchEvent(this,"Row_Updated",response_Code);
+  }
    @SimpleFunction
   public void Get_Row(int row_Number){
     getrow_Number = row_Number;
+  }
+  @SimpleEvent
+  public void Got_Row(int response_Code,String values){
+   EventDispatcher.dispatchEvent(this,"Got_Row",response_Code,values);
   }
    @SimpleFunction
   public void Set_Cell(int row_Number, String column_Name, String value){
     setnumber = row_Number;
     setname = column_Name;
     setvalue = value;
+  }
+  @SimpleEvent
+  public void Cell_Changed(int response_Code){
+   EventDispatcher.dispatchEvent(this,"Cell_Changed",response_Code);
   }
    @SimpleFunction
   public void Update_Row_by_Number(int row_Number, String column_Names, String values){
@@ -121,5 +137,9 @@ public class Fruitask extends AndroidNonvisibleComponent {
  @SimpleFunction
   public void Get_All_Rows(){
     
+  }
+  @SimpleEvent
+  public void Got_All_Rows(int response_Code,String response_Content,int total_Row){
+   EventDispatcher.dispatchEvent(this,"Got_All_Rows",response_Code,response_Content,total_Rows);
   }
 }
