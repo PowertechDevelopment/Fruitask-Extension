@@ -13,10 +13,10 @@ import com.google.appinventor.components.runtime.EventDispatcher;
 import com.google.appinventor.components.runtime.util.YailList;
 import com.google.appinventor.components.runtime.errors.YailRuntimeError;
 
-@DesignerComponent(version = 1,  description = "Fruitask Extension v1.0 .<br>" + 
+@DesignerComponent(version = 1,  description = "This Extension was created with the AppyBuilder Code Editor.<br>" + 
                    "Create your own here:<br><a href='https://editor.appybuilder.com' target='_blank'>https://editor.appybuilder.com</a><br>",
         category = ComponentCategory.EXTENSION,
-        nonVisible = true,   iconName = "https://fruitask.com/assets/logo/Fruitask-logo.svg")
+        nonVisible = true,   iconName = "http://appyBuilder.com/extensions/icons/extension.png")
 @SimpleObject(external = true)
 public class Fruitask extends AndroidNonvisibleComponent {
     private ComponentContainer container;
