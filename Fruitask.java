@@ -1,12 +1,3 @@
-/**  ~~~~~
- * Created with the AppyBuilder Code Editor.
- * This is a template for basic Extension.
- * Modify this template to customize your extension.
- *
- * **** NOTE: DO NOT use a package name. 
- * **** The package name will be created for you automatically.
- * **** Adding a package name will cause a compile error
- */
 import android.content.Context;
 import android.util.Log;
 import com.google.appinventor.components.annotations.*;
